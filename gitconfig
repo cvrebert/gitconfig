@@ -1,0 +1,41 @@
+[alias]
+#   Just for brevity
+        stat = status
+#   `checkout` should just deal with commits, not individual files too
+        clobber = checkout -- 
+#   "cached" instead of "stage" or even "index"; yeah, that's perfectly obvious.</sarcasm>
+        diff-staged = diff --cached
+        difftool-staged = difftool --cached
+        diff-unstaged = diff
+        difftool-unstaged = difftool
+#   Operate on the current branch for convenience
+#       I'd like to take this opportunity to say that `push branch [to] remote` would be so much more natural
+#       than git's `push[, to] remote[, ] branch" ordering (*sigh*)
+#     Would just be "push", but git doesn't allow that
+        push-to = "!f() { branchname=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'`; git push \"$1\" \"$branchname\"; }; f"
+        force-push-to = "!f() { branchname=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'`; git push -f \"$1\" \"$branchname\"; }; f"
+# branches
+        branches = "!sh -c 'echo Unmerged: && git branch -v --no-merged && echo Merged: && git branch -v --merged'"
+#   `checkout` really shouldn't be the command for this
+        new-branch = checkout -b
+        delete-branch-local = branch -d
+#   Magic colons were a horrible UI choice
+        delete-branch-origin = "!f() { git push origin \":$1\" ; }; f"
+#   Make conflict resolution feel more integrated
+        resolve = mergetool
+# staging
+        stage = add
+        stage-patch = add -p
+        unstage = reset HEAD
+# stash
+#   would just be "stash", but git doesn't allow that
+        stash-changes = stash save
+        unstash = stash pop --index
+        stashes = stash list
+        delete-stash = stash drop
+# rebase-ish
+#   Make amending first-class
+        amend = commit --amend
+#   Separate the two rather different uses of rebase
+        rebase-against = rebase
+        rebase-since = rebase -i
