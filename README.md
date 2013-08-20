@@ -40,15 +40,3 @@ git command aliases to make its interface halfway logical and user-friendly
 ### Rebase-related
 * `rebase-against <branch>` : Rebases the current branch against the given branch such that your commits will now have been made against the given branch's HEAD.
 * `rebase-since <SHA>` : Interactively rebases the current branch, allowing you to remix (i.e. squash, reorder, remove) all commits after the given commit
-
-## Diagrams
-
-```
-+--------------+ >>>> stage >>>> +---------+
-| Working Copy |                 | Staging |
-+--------------+ <<< unstage <<< +---------+
-
-+--------------+                 +----------------------+
-| Working Copy | <<< clobber <<< | Branch of Repository |
-+--------------+                 +----------------------+
-```
