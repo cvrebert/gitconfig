@@ -19,6 +19,7 @@
 #   `checkout` really shouldn't be the command for this
         new-branch = checkout -b
         delete-branch-local = branch -d
+        set-branch-head = branch -f
 #   Magic colons were a horrible UI choice
         delete-branch-origin = "!f() { git push origin \":$1\" ; }; f"
 #   Make conflict resolution feel more integrated
