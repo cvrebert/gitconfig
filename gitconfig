@@ -10,7 +10,7 @@
         difftool-unstaged = difftool
 #   Operate on the current branch for convenience
 #       I'd like to take this opportunity to say that `push branch [to] remote` would be so much more natural
-#       than git's `push[, to] remote[, ] branch" ordering (*sigh*)
+#       than git's `push[, to] remote[, ] branch` ordering (*sigh*)
 #     Would just be "push", but git doesn't allow that
         push-to = "!f() { branchname=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'`; git push \"$1\" \"$branchname\"; }; f"
         force-push-to = "!f() { branchname=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'`; git push -f \"$1\" \"$branchname\"; }; f"
