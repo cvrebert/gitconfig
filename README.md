@@ -8,6 +8,7 @@ git command aliases to make its interface halfway logical and user-friendly
 ### Core
 * `clobber <filepath(s)>` : Clobbers part of the working copy with the original version from the current branch
 * `amend` : Amends the last commit to include the changes currently in staging
+* `amend-author 'J. Random <j.random@example.com>'` : Amends the authorship information of the last commit
 * `stage <filepath(s)>` : Adds the changes in the given files to the staging area from the working copy
 * `stage-patch <optional filepath(s)>` : Interactively stage parts of changes in the given files to the staging area from the working copy
 * `unstage <filepath(s)>` : Un-stages the changes in the given files from the staging area back to the working copy
