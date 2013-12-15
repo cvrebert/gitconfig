@@ -38,6 +38,7 @@
 # rebase-ish
 #   Make amending first-class
         amend = commit --amend
+        amend-author = commit --amend -C HEAD --author
 #   Separate the two rather different uses of rebase
         rebase-against = rebase
         rebase-since = rebase -i
