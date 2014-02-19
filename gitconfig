@@ -6,8 +6,10 @@
 #   "cached" instead of "stage" or even "index"; yeah, that's perfectly obvious.</sarcasm>
         diff-staged = diff --cached
         difftool-staged = difftool --cached
+        wdiff-staged = diff --word-diff --cached
         diff-unstaged = diff
         difftool-unstaged = difftool
+	wdiff-unstaged = diff --word-diff
 #   Operate on the current branch for convenience
 #       I'd like to take this opportunity to say that `push branch [to] remote` would be so much more natural
 #       than git's `push[, to] remote[, ] branch` ordering (*sigh*)
