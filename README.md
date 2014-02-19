@@ -16,9 +16,11 @@ git command aliases to make its interface halfway logical and user-friendly
 ### Diff-related
 * `diff-unstaged <optional filepath(s)>` : Diffs the working copy against staging
 * `difftool-unstaged <optional filepath(s)>` : Graphically diffs the working copy against staging
+* `wdiff-unstaged <optional filepath(s)>` : Wordwise-diffs the working copy against staging
 
 * `diff-staged <optional filepath(s)>` : Diffs staging against the last commit
 * `difftool-staged <optional filepath(s)>` : Graphically diffs staging against the last commit
+* `wdiff-staged <optional filepath(s)>` : Wordwise-diffs the working copy against the last commit
 
 ### Branch-related
 * `branches` : Lists all branches, grouped by merge status relative to the current branch
