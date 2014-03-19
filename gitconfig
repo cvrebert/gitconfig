@@ -28,8 +28,8 @@
         resolve = mergetool
         abandon-merge = reset --merge
 # staging
-        stage = add
-        stage-patch = add -p
+        stage = add --all
+        stage-patch = add --all -p
         unstage = reset HEAD
 # stash
 #   would just be "stash", but git doesn't allow that
