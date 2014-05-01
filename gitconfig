@@ -47,3 +47,5 @@
 #   Separate the two rather different uses of rebase
         rebase-against = rebase
         rebase-since = rebase -i
+# useful as something to diff against
+	null-sha = hash-object -t tree /dev/null
