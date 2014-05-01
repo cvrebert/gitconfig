@@ -16,6 +16,8 @@
 [branch]
 # Rebasing is preferable to Merging
         autosetuprebase = always
+[push]
+	default = simple
 [alias]
 #   Just for brevity
         stat = status
