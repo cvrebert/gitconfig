@@ -1,3 +1,18 @@
+[diff]
+#   Gives more sensible diffs on the command line
+	algorithm = patience
+# Configure diffmerge (https://sourcegear.com/diffmerge/)
+#   as diff & merge tool
+	tool = diffmerge
+[difftool "diffmerge"]
+	cmd = diffmerge $LOCAL $REMOTE
+[merge]
+	tool = diffmerge
+[mergetool]
+	keepBackup = false
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+	trustExitCode = true
 [branch]
 # Rebasing is preferable to Merging
         autosetuprebase = always
