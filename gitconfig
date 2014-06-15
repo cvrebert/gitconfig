@@ -18,6 +18,9 @@
         autosetuprebase = always
 [push]
 	default = simple
+[credential]
+# Let OS X remember our logins for us
+	helper = osxkeychain
 [alias]
 #   Just for brevity
         stat = status
