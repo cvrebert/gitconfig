@@ -49,7 +49,6 @@
         delete-branch-origin = "!f() { git push origin \":$1\" ; }; f"
 #   Make conflict resolution feel more integrated
         resolve = mergetool
-        abandon-merge = reset --merge
 # staging
         stage = add --all
         stage-patch = add --all -p
