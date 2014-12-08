@@ -28,6 +28,7 @@ git command aliases to make its interface halfway logical and user-friendly
 * `push-to <remote>` : Pushes the current branch to the given remote
 * `force-push-to <remote>` : Forcibly pushes the current branch to the given remote. Also a nice *Star Wars* reference.
 * `delete-branch-local <branch>` : Deletes the given branch locally
+* `delete-merged-branches` : Deletes local branches that have already been merged to the current branch
 * `delete-branch-origin <branch>` : Deletes the given branch from the remote origin server
 * `set-branch-head <branch> <SHA>` : Sets the HEAD pointer of the given branch to the given commit
 
