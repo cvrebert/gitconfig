@@ -44,6 +44,7 @@
 #   `checkout` really shouldn't be the command for this
         new-branch = checkout -b
         delete-branch-local = branch -d
+        delete-merged-branches = "!f() { git branch --no-color --merged | grep -v '\\*' | grep -v master | grep -v develop | xargs -n 1 git branch -d; }; f"
         set-branch-head = branch -f
 #   Magic colons were a horrible UI choice
         delete-branch-origin = "!f() { git push origin \":$1\" ; }; f"
