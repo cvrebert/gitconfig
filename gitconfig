@@ -40,7 +40,7 @@
         push-to = "!f() { branchname=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'`; git push \"$1\" \"$branchname\"; }; f"
         force-push-to = "!f() { branchname=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'`; git push -f \"$1\" \"$branchname\"; }; f"
 # branches
-        branches = "!sh -c 'echo Unmerged: && git branch -v --no-merged && echo Merged: && git branch -v --merged'"
+        branches = "!sh -c 'echo Unmerged: && git branch -a -v --no-merged && echo Merged: && git branch -a -v --merged'"
 #   `checkout` really shouldn't be the command for this
         new-branch = checkout -b
         delete-branch-local = branch -d
