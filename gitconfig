@@ -18,6 +18,8 @@
         autosetuprebase = always
 [push]
 	default = simple
+[fetch]
+	prune = true
 [credential]
 # Let OS X remember our logins for us
 	helper = osxkeychain
