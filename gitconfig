@@ -16,6 +16,8 @@
 [branch]
 # Rebasing is preferable to Merging
         autosetuprebase = always
+[pull]
+	rebase = true
 [push]
 	default = simple
 [fetch]
