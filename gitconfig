@@ -21,6 +21,7 @@
 [push]
 	default = simple
 [fetch]
+# Auto-kill defunct remote branches
 	prune = true
 [credential]
 # Let OS X remember our logins for us
