@@ -40,7 +40,7 @@
 #   Operate on the current branch for convenience
 #       I'd like to take this opportunity to say that `push branch [to] remote` would be so much more natural
 #       than git's `push[, to] remote[, ] branch` ordering (*sigh*)
-#     Would just be "push", but git doesn't allow that
+#     Would just be "push" except that would break compatibility
         push-to = "!f() { branchname=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'`; git push \"$1\" \"$branchname\"; }; f"
         force-push-to = "!f() { branchname=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'`; git push -f \"$1\" \"$branchname\"; }; f"
 # branches
@@ -58,7 +58,7 @@
         stage-patch = add --all -p
         unstage = reset HEAD
 # stash
-#   would just be "stash", but git doesn't allow that
+#   would just be "stash" except that would break compatibility
         stash-changes = stash save
         unstash = stash pop --index
         stashes = stash list
