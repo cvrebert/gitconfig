@@ -50,7 +50,6 @@
         delete-branch-local = branch -d
         delete-merged-branches = "!f() { git branch --no-color --merged | grep -v '\\*' | grep -v master | grep -v develop | xargs -n 1 git branch -d; }; f"
         set-branch-head = branch -f
-#   Magic colons were a horrible UI choice
         delete-branch-remote = "!f() { git push --delete \"$2\" \"$1\" ; }; f"
 #   Make conflict resolution feel more integrated
         resolve = mergetool
