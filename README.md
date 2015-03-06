@@ -34,7 +34,6 @@ git command aliases to make its interface halfway logical and user-friendly
 
 ### Merge-related
 * `resolve` : Opens your graphical merge/diff tool to resolve any outstanding merge conflicts
-* `abandon-merge` : Abandons the current merge and returns the working copy to its previous state
 
 ### Stash-related
 * `stashes` : Lists all stashes
