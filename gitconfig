@@ -49,7 +49,7 @@
 #   `checkout` really shouldn't be the command for this
         new-branch = checkout -b
         delete-branch-local = branch -d
-        delete-merged-branches = "!f() { git branch --no-color --merged | grep -v '\\*' | grep -v master | grep -v develop | xargs -n 1 git branch -d; }; f"
+        delete-merged-branches = "!f() { git branch --no-color --merged | grep -v '\\*' | grep -v master | grep -v develop | xargs -n 1 git branch -d -D; }; f"
         set-branch-head = branch -f
         delete-branch-remote = "!f() { git push --delete \"$2\" \"$1\" ; }; f"
 #   Make conflict resolution feel more integrated
