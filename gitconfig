@@ -23,6 +23,8 @@
 [fetch]
 # Auto-kill defunct remote branches
 	prune = true
+[rebase]
+        autostash = true
 [credential]
 # Let OS X remember our logins for us
 	helper = osxkeychain
