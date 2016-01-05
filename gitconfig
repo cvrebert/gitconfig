@@ -25,6 +25,8 @@
 	prune = true
 [rebase]
         autostash = true
+[stash]
+        showPatch = true
 [credential]
 # Let OS X remember our logins for us
 	helper = osxkeychain
