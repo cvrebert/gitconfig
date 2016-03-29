@@ -1,3 +1,5 @@
+[user]
+	useConfigOnly = true
 [diff]
 #   Gives more sensible diffs on the command line
 	algorithm = patience
