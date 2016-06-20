@@ -3,6 +3,7 @@
 [diff]
 #   Gives more sensible diffs on the command line
 	algorithm = patience
+	compactionHeuristic = true
 # Configure diffmerge (https://sourcegear.com/diffmerge/)
 #   as diff & merge tool
 	tool = diffmerge
